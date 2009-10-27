@@ -1,16 +1,10 @@
 package LWP::UserAgent::MobileJP;
 use 5.008_001;
-use Any::Moose;
 use Module::Pluggable
     search_path => [qw(LWP::UserAgent::MobileJP::Agent)],
     sub_name    => 'agents';
 
-extends 'LWP::UserAgent';
-
 our $VERSION = '0.01';
-
-no Any::Moose;
-__PACKAGE__->meta->make_immutable;
 
 1;
 
